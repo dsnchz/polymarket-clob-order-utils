@@ -48,8 +48,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@metamask/eth-sig-util": "^5.0.0",
-    "ethers": "^5.7.1"
+    "@ethersproject/providers": "5.8.0",
+    "@ethersproject/wallet": "5.8.0",
+    "@metamask/eth-sig-util": "^5.0.0"
   },
   "devDependencies": {
     "@tsconfig/strictest": "2.0.7",
