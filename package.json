@@ -1,21 +1,25 @@
 {
-  "name": "@polymarket/order-utils",
-  "version": "2.1.0",
+  "name": "@dschz/polymarket-clob-order-utils",
+  "version": "0.1.0",
   "description": "Typescript utility for creating orders for Polymarket's CLOB",
-  "author": "Liam Kovatch <liam@polymarket.com>",
-  "homepage": "https://github.com/Polymarket/clob-order-utils",
+  "author": "Daniel Sanchez <dsanc89@pm.me>",
+  "homepage": "https://github.com/dsnchz/polymarket-clob-order-utils",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Polymarket/clob-order-utils.git"
+    "url": "git+ssh://git@github.com/dsnchz/polymarket-clob-order-utils.git"
   },
   "bugs": {
-    "url": "https://github.com/Polymarket/clob-order-utils/issues"
+    "url": "https://github.com/dsnchz/polymarket-clob-order-utils/issues"
   },
   "contributors": [
+    {
+      "name": "Daniel Sanchez",
+      "url": "https://github.com/dsnchz"
+    },
     {
       "name": "Liam Kovatch",
       "url": "https://github.com/L-Kov"
