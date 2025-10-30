@@ -5,15 +5,15 @@
   "author": "Liam Kovatch <liam@polymarket.com>",
   "homepage": "https://github.com/Polymarket/clob-order-utils",
   "license": "MIT",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "engines": {
-    "node": ">=8",
-    "npm": ">=5"
-  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/Polymarket/clob-order-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Polymarket/clob-order-utils/issues"
   },
   "contributors": [
     {
@@ -33,43 +33,40 @@
       "url": "https://github.com/mshrieve"
     }
   ],
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "make build",
-    "test": "make test",
-    "lint": "make lint",
-    "postbuild": "cp package.json dist && cp README.md dist"
+    "build": "rm -rf dist && tsc --module commonjs",
+    "format": "prettier . --check",
+    "format:fix": "prettier . --write",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "bun test",
+    "test:cov": "bun test --coverage",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@metamask/eth-sig-util": "^5.0.0",
     "ethers": "^5.7.1"
   },
   "devDependencies": {
-    "@types/chai": "^4.3.3",
-    "@types/mocha": "^9.1.1",
-    "@types/node": "^18.7.18",
-    "@typescript-eslint/eslint-plugin": "^5.37.0",
-    "@typescript-eslint/parser": "^5.37.0",
-    "chai": "^4.3.6",
-    "eslint": "^8.23.1",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-standard-with-typescript": "^23.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.2.5",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.0.1",
-    "eslint-plugin-unused-imports": "^2.0.0",
-    "esm": "^3.2.25",
-    "jsdom": "^20.0.0",
-    "jsdom-global": "^3.0.2",
-    "mocha": "^10.0.0",
-    "nyc": "^15.1.0",
-    "prettier": "^2.7.1",
-    "ts-mocha": "^10.0.0",
-    "ts-node": "^10.9.1",
-    "tslib": "^2.4.0",
-    "typescript": "^4.8.3"
+    "@tsconfig/strictest": "2.0.7",
+    "@types/bun": "1.3.1",
+    "@types/node": "22.18.4",
+    "@typescript-eslint/eslint-plugin": "8.46.2",
+    "@typescript-eslint/parser": "8.46.2",
+    "eslint": "9.35.0",
+    "eslint-import-resolver-typescript": "4.4.4",
+    "eslint-plugin-simple-import-sort": "12.1.1",
+    "globals": "16.4.0",
+    "jiti": "2.6.1",
+    "prettier": "3.6.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.46.2"
   },
-  "bugs": {
-    "url": "https://github.com/Polymarket/clob-order-utils/issues"
-  }
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "packageManager": "bun@>=1.3.0"
 }

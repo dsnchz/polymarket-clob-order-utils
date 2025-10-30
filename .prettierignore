@@ -1,5 +1,12 @@
-.github
-CHANGELOG.md
+# Ignore artifacts:
+dist
+build
 coverage
 node_modules
-dist
+.nyc_output
+
+# Lock files (auto-generated, should not be formatted)
+bun.lock
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
