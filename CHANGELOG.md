@@ -1,5 +1,11 @@
 # @dschz/polymarket-clob-order-utils
 
+## 0.2.1
+
+### Patch Changes
+
+- Fixes bundling
+
 ## 0.2.0
 
 ### Minor Changes
