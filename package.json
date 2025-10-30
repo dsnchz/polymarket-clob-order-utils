@@ -43,6 +43,13 @@
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
     "build": "tsup",
     "build:watch": "tsup --watch",
@@ -58,8 +65,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@ethersproject/providers": "5.8.0",
-    "@ethersproject/wallet": "5.8.0",
+    "@ethersproject/providers": "^5.8.0",
+    "@ethersproject/wallet": "^5.8.0",
     "@metamask/eth-sig-util": "^5.0.0"
   },
   "devDependencies": {
