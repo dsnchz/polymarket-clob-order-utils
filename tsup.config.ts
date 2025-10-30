@@ -7,8 +7,7 @@ export default defineConfig({
   entry: ["src/index.ts"],
   format: ["esm"],
   clean: true,
-  bundle: false,
-  external: [...Object.keys(pkg.dependencies)],
+  bundle: true,
   dts: {
     footer: `declare module '${pkg.name}'`,
   },
