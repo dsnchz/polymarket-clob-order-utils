@@ -2,22 +2,12 @@
   "name": "@dschz/polymarket-clob-order-utils",
   "version": "0.2.1",
   "description": "Typescript utility for creating orders for Polymarket's CLOB",
-  "author": "Daniel Sanchez <dsanc89@pm.me>",
   "homepage": "https://github.com/dsnchz/polymarket-clob-order-utils",
-  "license": "MIT",
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/dsnchz/polymarket-clob-order-utils.git"
-  },
   "bugs": {
     "url": "https://github.com/dsnchz/polymarket-clob-order-utils/issues"
   },
-  "publishConfig": {
-    "access": "public"
-  },
+  "license": "MIT",
+  "author": "Daniel Sanchez <dsanc89@pm.me>",
   "contributors": [
     {
       "name": "Daniel Sanchez",
@@ -40,9 +30,16 @@
       "url": "https://github.com/mshrieve"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dsnchz/polymarket-clob-order-utils.git"
+  },
   "files": [
     "dist"
   ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -50,11 +47,14 @@
       "require": "./dist/index.js"
     }
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsup",
     "build:watch": "tsup --watch",
-    "format": "prettier . --check",
-    "format:fix": "prettier . --write",
+    "format": "oxfmt --check",
+    "format:fix": "oxfmt",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "pkg:changeset": "changeset",
@@ -81,7 +81,7 @@
     "eslint-plugin-simple-import-sort": "12.1.1",
     "globals": "16.4.0",
     "jiti": "2.6.1",
-    "prettier": "3.6.2",
+    "oxfmt": "^0.60.0",
     "tsup": "8.5.0",
     "typescript": "5.9.3",
     "typescript-eslint": "8.46.2"
